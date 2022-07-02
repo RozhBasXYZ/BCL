@@ -236,7 +236,7 @@ def cloning4():
 																														    ###----[ CLONING 2014-2022 ]---###
 def cloning5():
 	global ok , cp
-	print(f' [{hh}>{P}] cloning 2010-2014, 50% dapat hasil')
+	print(f' [{hh}>{P}] cloning 2014-2022, 50% dapat hasil')
 	tol = input(' total : ')
 	bas = input(' sandi : ').split(',')
 	for xyz in range(int(tol)): 
