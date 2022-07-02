@@ -155,7 +155,6 @@ def cloning1():
 		B = rr(0,4)
 		C = rr(11111,99999)
 		D = f'{A}{B}{C}'
-		print(D)
 		if D in dump:pass
 		else:dump.append(D)
 		print('\r sedang dump %s id'%(len(dump)),end='')
