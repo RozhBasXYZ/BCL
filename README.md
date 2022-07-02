@@ -1,5 +1,5 @@
 # SCRIPT CLONING FACEBOOK❗
-Script Crack Facebook Versi Cloning
+Script Brute Crack Facebook Versi Cloning
 
 #### Install Script Di Termux
  Disarankan Untuk Memakai Termux Fdroid, Unduh Aplikasi Nya [Disini](https://f-droid.org/repo/com.termux_118.apk)
